@@ -2,6 +2,10 @@
 
 Proof-of-concept Prometheus MCP server.
 
+<a href="https://glama.ai/mcp/servers/@etruong42/prometheus-mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@etruong42/prometheus-mcp/badge" alt="Prometheus MCP server" />
+</a>
+
 ## Prerequisites
 
 Install `uv`: <https://docs.astral.sh/uv/getting-started/installation/>
