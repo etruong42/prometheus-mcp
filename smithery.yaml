@@ -1,0 +1,33 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - prometheusUrl
+    properties:
+      prometheusUrl:
+        type: string
+        default: http://localhost:9090
+        description: The base URL for accessing Prometheus API endpoints.
+      googleAuthJsonFile:
+        type: string
+        default: ""
+        description: Path to the Google service account JSON file if authentication is
+          needed.
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({
+      command: 'python',
+      args: ['server.py'],
+      env: {
+        PROMETHEUS_URL: config.prometheusUrl,
+        ...(config.googleAuthJsonFile ? { GOOGLE_AUTH_JSON_FILE: config.googleAuthJsonFile } : {}),
+      }
+    })
+  exampleConfig:
+    prometheusUrl: http://localhost:9090
+    googleAuthJsonFile: /path/to/service-account.json

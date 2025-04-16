@@ -1,5 +1,7 @@
 # Prometheus MCP
 
+[![smithery badge](https://smithery.ai/badge/@etruong42/prometheus-mcp)](https://smithery.ai/server/@etruong42/prometheus-mcp)
+
 Proof-of-concept Prometheus MCP server.
 
 ## Prerequisites
@@ -52,3 +54,4 @@ for more details for Claude specific instructions.
 [![Demo gif](./docs/prom-mcp-demo.gif '')](https://github.com/etruong42/prometheus-mcp/raw/refs/heads/main/docs/prometheus-demo-video.mp4)
 
 [Link to shared Claude chat in demo](https://claude.ai/share/c89412c1-5f19-430a-8c85-bf3c05033f81)
+
