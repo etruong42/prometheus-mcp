@@ -1,0 +1,15 @@
+[project]
+name = "prometheus-mcp"
+version = "0.1.0"
+description = "MCP server to expose Prometheus tools to an LLM"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "google-auth>=2.38.0",
+    "httpx>=0.28.1",
+    "matplotlib>=3.10.1",
+    "mcp[cli]>=1.6.0",
+    "pillow>=11.1.0",
+    "python-dotenv>=1.1.0",
+    "requests>=2.32.3",
+]
