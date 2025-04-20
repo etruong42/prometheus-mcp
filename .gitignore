@@ -12,3 +12,4 @@ wheels/
 .DS_Store
 uv.lock
 sa.json
+.env
