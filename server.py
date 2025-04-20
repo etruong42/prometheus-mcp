@@ -107,14 +107,6 @@ def prometheus_alert_rules() -> dict[str, any]:
     return data
 
 
-@mcp.resource("file://promql_for_gcp_docs.md")
-def get_schema() -> str:
-    """Retrieve document that describes instructions for writing promql queries for GCP"""
-    with open("promql-for-gcp-docs.md", "r") as file:
-        contents = file.read()
-    return contents
-
-
 if __name__ == "__main__":
     print("Initialize and run the Prometheus MCP server")
     load_dotenv()
